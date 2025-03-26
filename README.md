@@ -1,5 +1,7 @@
 # Airborne Rails
 
+[![CI](https://github.com/Placewise/airborne-rails/actions/workflows/ci.yml/badge.svg)](https://github.com/Placewise/airborne-rails/actions/workflows/ci.yml)
+
 RSpec driven API testing framework
 
 ## Installation
