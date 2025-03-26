@@ -1,14 +1,20 @@
-require 'coveralls'
-Coveralls.wear!
-require 'airborne'
-require 'stub_helper'
+# frozen_string_literal: true
 
-Airborne.configure do |config|
-  config.base_url = 'http://www.example.com'
-  config.include StubHelper
+require "simplecov"
+SimpleCov.start do
+  coverage_dir "tmp/coverage"
+  enable_coverage :branch
 end
 
+require "airborne"
+
+require "action_controller/railtie"
+require "rspec/rails"
+
+require "support/rails_app"
+
 ExpectationNotMetError = RSpec::Expectations::ExpectationNotMetError
-ExpectationError       = Airborne::ExpectationError
-InvalidJsonError       = Airborne::InvalidJsonError
-PathError              = Airborne::PathError
+
+RSpec.configure do |config|
+  config.example_status_persistence_file_path = "tmp/spec_examples.txt"
+end

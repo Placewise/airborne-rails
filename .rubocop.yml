@@ -1,0 +1,31 @@
+plugins:
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Exclude
+    - AllowedIdentifiers
+    - AllowedNames
+
+AllCops:
+  TargetRubyVersion: 3.4.2
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  SuggestExtensions: false
+  NewCops: enable
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/RedundantCondition:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

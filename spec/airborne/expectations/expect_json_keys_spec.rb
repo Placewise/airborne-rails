@@ -1,21 +1,23 @@
-require 'spec_helper'
+# frozen_string_literal: true
 
-describe 'expect_json_keys' do
-  it 'should fail when json keys are missing' do
-    mock_get('simple_json')
-    get '/simple_json', {}
-    expect { expect_json_keys([:foo, :bar, :baz, :bax]) }.to raise_error(ExpectationNotMetError)
+describe Airborne::Expectations, "#expect_json_keys", type: :request do
+  it "ensures correct json keys" do
+    get "/simple_json"
+    expect_json_keys(%i[foo bar baz])
   end
 
-  it 'should ensure correct json keys' do
-    mock_get('simple_json')
-    get '/simple_json', {}
-    expect_json_keys([:foo, :bar, :baz])
+  it "ensures correct partial json keys" do
+    get "/simple_json"
+    expect_json_keys(%i[foo bar])
   end
 
-  it 'should ensure correct partial json keys' do
-    mock_get('simple_json')
-    get '/simple_json', {}
-    expect_json_keys([:foo, :bar])
+  it "ensures json keys with path" do
+    get "/simple_nested_path"
+    expect_json_keys("address", %i[street city])
+  end
+
+  it "fails when keys are missing with path" do
+    get "/simple_nested_path"
+    expect { expect_json_keys("address", [:bad]) }.to raise_error(ExpectationNotMetError)
   end
 end

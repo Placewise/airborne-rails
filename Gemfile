@@ -1,11 +1,14 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
+
+source "https://rubygems.org"
 
 gemspec
 
-gem 'coveralls', require: false
-gem 'faraday-retry', require: false
+gem "simplecov"
+gem "webmock"
 
-group :test do
-  gem 'webmock'
-  gem 'sinatra'
-end
+gem "rubocop"
+gem "rubocop-checkstyle_formatter"
+gem "rubocop-daemon"
+gem "rubocop-performance"
+gem "rubocop-rspec"

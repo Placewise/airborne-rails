@@ -1,21 +1,17 @@
-require 'date'
+# frozen_string_literal: true
 
-Gem::Specification.new do |s|
-  s.name        = 'airborne'
-  s.version     = '0.3.7'
-  s.date        = Date.today.to_s
-  s.summary = 'RSpec driven API testing framework'
-  s.authors     = ['Alex Friedman', 'Seth Pollack']
-  s.email       = ['a.friedman07@gmail.com', 'seth@sethpollack.net']
-  s.require_paths = ['lib']
-  s.files = `git ls-files`.split("\n")
-  s.license     = 'MIT'
-  s.add_runtime_dependency 'rspec', '~> 3.8'
-  s.add_runtime_dependency 'rest-client', '< 3.0', '>= 2.0.2'
-  s.add_runtime_dependency 'rack-test', '< 3', '>= 1.1.0'
-  s.add_runtime_dependency 'rack'
-  s.add_runtime_dependency 'activesupport'
-  s.add_development_dependency 'webmock', '~> 3'
-  s.add_development_dependency 'rake', '~> 12'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.14'
+Gem::Specification.new do |spec|
+  spec.name = "airborne-rails"
+  spec.version = "0.99.0"
+  spec.required_ruby_version = ">= 3.0.0"
+  spec.license = "MIT"
+  spec.summary = "RSpec helpers and expectations for Rails-based JSON APIs - extracted from airborne"
+  spec.homepage = "https://github.com/Placewise/airborne-rails"
+  spec.authors = ["Placewise Devs"]
+  spec.email = ["mpc.dev@placewise.com"]
+  spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(lib)/}) }
+  spec.metadata["rubygems_mfa_required"] = "true"
+
+  spec.add_dependency "rspec"
+  spec.add_dependency "rspec-rails"
 end

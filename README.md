@@ -1,22 +1,11 @@
-# Airborne
-
-[![airborne travis](http://img.shields.io/travis/brooklynDev/airborne.svg?branch=master&style=flat-square)](https://travis-ci.org/brooklynDev/airborne)
-[![airborne coveralls](http://img.shields.io/coveralls/brooklynDev/airborne/master.svg?style=flat-square)](https://coveralls.io/r/brooklynDev/airborne?branch=master)
-[![Code Climate](https://api.codeclimate.com/v1/badges/00644ffcf94d5813aa80/maintainability)](https://codeclimate.com/github/brooklynDev/airborne/maintainability)
-[![airborne gem version](http://img.shields.io/gem/v/airborne.svg?style=flat-square)](http://rubygems.org/gems/airborne)
-[![airbore gem downloads](http://img.shields.io/gem/dt/airborne.svg?style=flat-square)](http://rubygems.org/gems/airborne)
-[![airborne gem stable downloads](http://img.shields.io/gem/dv/airborne/stable.svg?style=flat-square)](http://rubygems.org/gems/airborne)
+# Airborne Rails
 
 RSpec driven API testing framework
-
-## Looking for Project Maintainers
-I am looking for project maintainers to help keep airborne up to date and bug-free while avoiding feature creep and maintaining backwards compatibility.
-
-Comment [here](https://github.com/brooklynDev/airborne/issues/134) if you would like to help out.
 
 ## Installation
 
 Install Airborne:
+
 ```shell
 $ gem install airborne
 ```

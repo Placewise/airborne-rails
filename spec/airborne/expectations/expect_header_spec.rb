@@ -1,21 +1,9 @@
-require 'spec_helper'
+# frozen_string_literal: true
 
-describe 'expect header' do
-  it 'should find exact match for header content' do
-    mock_get('simple_get', 'Content-Type' => 'application/json')
-    get '/simple_get'
-    expect_header(:content_type, 'application/json')
-  end
+describe Airborne::Expectations, "#expect_header", type: :request do
+  before { get "/simple_get" }
 
-  it 'should find exact match for header content' do
-    mock_get('simple_get', 'Content-Type' => 'json')
-    get '/simple_get'
-    expect { expect_header(:content_type, 'application/json') }.to raise_error(ExpectationNotMetError)
-  end
-
-  it 'should ensure correct headers are present' do
-    mock_get('simple_get', 'Content-Type' => 'application/json')
-    get '/simple_get'
-    expect { expect_header(:foo, 'bar') }.to raise_error(ExpectationNotMetError)
-  end
+  it { expect_header(:content_type, "application/json; charset=utf-8") }
+  it { expect { expect_header(:content_type, "application/json") }.to raise_error(ExpectationNotMetError) }
+  it { expect { expect_header(:foo, "bar") }.to raise_error(ExpectationNotMetError) }
 end
