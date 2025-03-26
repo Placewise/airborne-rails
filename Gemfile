@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "simplecov"
+gem "simplecov-lcov"
 gem "webmock"
 
 gem "rubocop"

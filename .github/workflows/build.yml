@@ -9,6 +9,8 @@ permissions:
   contents: read
 jobs:
   build:
+    env:
+      CI: "true"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -29,3 +31,5 @@ jobs:
       with:
         json-path: tmp/rspec_results.json
       if: always()
+    - name: Publish to Coveralls
+      uses: coverallsapp/github-action@v2

@@ -1,6 +1,7 @@
 # Airborne Rails
 
-[![CI](https://github.com/Placewise/airborne-rails/actions/workflows/ci.yml/badge.svg)](https://github.com/Placewise/airborne-rails/actions/workflows/ci.yml)
+[![CI](https://github.com/Placewise/airborne-rails/actions/workflows/build.yml/badge.svg)](https://github.com/Placewise/airborne-rails/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/Placewise/airborne-rails/badge.svg?branch=master)](https://coveralls.io/github/Placewise/airborne-rails?branch=master)
 
 RSpec driven API testing framework
 
