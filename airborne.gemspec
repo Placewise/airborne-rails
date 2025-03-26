@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "lib/airborne/version"
+
 Gem::Specification.new do |spec|
   spec.name = "airborne-rails"
-  spec.version = "0.99.0"
+  spec.version = AirborneRails::VERSION
   spec.required_ruby_version = ">= 3.0.0"
   spec.license = "MIT"
   spec.summary = "RSpec helpers and expectations for Rails-based JSON APIs - extracted from airborne"
