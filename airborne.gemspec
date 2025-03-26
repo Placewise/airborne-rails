@@ -14,6 +14,5 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(lib)/}) }
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  spec.add_dependency "rspec"
-  spec.add_dependency "rspec-rails"
+  spec.add_dependency "rspec-rails", ">= 4.0"
 end
