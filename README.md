@@ -27,7 +27,7 @@ describe "GET /person", type: :request do
   before { get "/person" } # JSON API that returns { "name": "Susan", "age": 30 }
 
   it "returns specific value" do
-    expect_json(name: "OK")
+    expect_json(name: "Susan")
   end
   
   it "returns specific type" do
