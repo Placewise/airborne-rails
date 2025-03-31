@@ -138,13 +138,13 @@ describe "Example" do
 end
 ```
 
-When dealing with `arrays`, you can test:
+When dealing with `arrays`, you can check:
 
 * all: `*`, 
 * any : `?`,
 * specific: `<index>` (e.g. `0`)
 
-element of the array:
+element(s) of the array:
 
 ```ruby
 describe "Example" do
