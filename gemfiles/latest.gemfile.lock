@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    airborne-rails (0.99.1)
+    airborne-rails (0.99.2)
       rspec-rails (>= 4.0)
 
 GEM
